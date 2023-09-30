@@ -1,2 +1,2 @@
 #!/bin/bash
-touch ls mkdir 
+pwd mkdir 

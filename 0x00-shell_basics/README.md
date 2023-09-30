@@ -1,3 +1,2 @@
-touch is used to create empty file
+pwd is used to whrere you are currently
 mkdir is used to make directory
-ls is used to list current files
