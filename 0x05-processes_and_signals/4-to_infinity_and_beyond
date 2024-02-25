@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# a script that is used to infinite loop and sleep
+var=0
+while [ $var ]; do
+echo 'To infinity and beyond'
+sleep 2
+done
