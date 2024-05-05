@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# websites
-#development
+#world_wide_web holberton online
 
 if [ $# -eq 0 ]; then
     exit
