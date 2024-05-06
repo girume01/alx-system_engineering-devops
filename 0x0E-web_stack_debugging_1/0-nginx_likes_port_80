@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-# script that restores the default server port
 
-file=/etc/nginx/sites-enabled/default
-sed -i 's/8080 default/80 default/' $file
-sudo service nginx restart
+nginx_conf="/etc/nginx/sites-enabled/default"
+
+if ! command -v nginx &> /dev/null; then
+    exit 1
+fi
+
+if ! systemctl is-active --quiet nginx; then
+    sudo systemctl start nginx
+fi
+
+sudo sed -i 's/listen 8080 default_server;/listen 80 default_server;/g' $nginx_conf
+sudo systemctl restart nginx
